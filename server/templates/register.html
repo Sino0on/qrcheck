@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css'%}">
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <div class="hero__bg">
+                    <img src="{% static '/assets/img/hero/background.svg' %}" alt="">
+
+                    <div class="hero__register" style="height: 515px;">
+                        <h1>Регистрация</h1>
+
+                        <form method="post">
+                            <label>{% csrf_token %}
+                                <p>Имя и фамилия</p>
+                                {{ form.username }}
+                            </label>
+                            <label class="hero__position">
+                                <p class="hero__top">Пароль</p>
+                                <div>
+                                {{ form.password1 }}
+                                <img src="{% static '/assets/img/hero/eye.svg' %}" alt="">
+                            </div>
+                            </label>
+                            <label class="hero__position">
+                                  <p class="hero__top">Повторите пароль</p>
+                                  <div>
+                                  {{ form.password2 }}
+                                  <img src="{% static '/assets/img/hero/eye.svg' %}" alt="">
+                              </div>
+                              </label>
+
+                        <div class="hero__come">
+                            <button type="submit">Зарегистрироваться</button>
+                            <img src="{% static '/assets/img/hero/line_blue.svg' %}" alt="">
+                        </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

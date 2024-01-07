@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+
+<body>
+    <section class="grade">
+        <div class="grade__content">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__account" href="#">
+                            Аккаунт
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Запросить оценку
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Выйти
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="grade__user">
+                <button class="grade__burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <img src="{% static '/assets/img/new/user.svg' %}" alt="">
+            </div>
+            <div class="grade__request">
+                <div class="grade__text">
+                    <p>Выбрать оценку</p>
+                    <img class="grade__arrow" src="{% static '/assets/img/grade/arrow.svg' %}" alt="">
+                    <img class="grade__line" src="{% static '/assets/img/grade/line.svg' %}" alt="">
+                </div>
+            </div>
+            <div class="grade__password">
+                <p>Возникли проблемы?</p>
+                <img src="{% static '/assets/img/hero/line.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="./grade.js"></script>
+</body>
+
+</html>

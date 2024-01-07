@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+{% load qr_code %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+
+<body>
+
+    <section class="new">
+        <div class="new__content">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__account" href="#">
+                            Аккаунт
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Запросы 
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/para_end/{{para.pk}}">
+                            Закончить пару
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Выйти
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="new__user">
+                <button class="new__burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <img src="{% static '/assets/img/new/user.svg' %}" alt="">
+            </div>
+            <div class="new__qr">
+                {% for i in grades %}
+                <p>{{ i.student }} - {{ i.grade }}   <a href="/success_grade/{{i.pk}}">Подтвердить</a></p>
+                {% endfor %}
+            </div>
+            <div class="new__password">
+                <p>Забыли пароль?</p>
+                <img src="{% static '/assets/img/hero/line.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static '/index.js' %}"></script>
+</body>
+
+</html>

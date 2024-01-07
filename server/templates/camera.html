@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+
+<body>
+    <section class="camera">
+        <div class="camera__content">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__account" href="#">
+                            Аккаунт
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Запросить оценку
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Выйти
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="camera__user">
+                <button class="camera__burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <img src="{% static '/assets/img/new/user.svg' %}" alt="">
+            </div>
+            <div class="camera__qr">
+                <div class="camera__text">
+                    <p>Открыть камеру</p>
+                    <img src="{% static '/assets/img/hero/line_blue.svg' %}" alt="">
+                </div>
+            </div>
+            <div class="camera__password">
+                <p>Возникли проблемы?</p>
+                <img src="{% static '/assets/img/hero/line.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="{% static '/camera.js' %}"></script>
+</body>
+
+</html>

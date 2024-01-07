@@ -1,0 +1,12 @@
+db.sqlite3
+venv
+static
+media
+.idea
+package-lock.json
+
+**/migrations/**
+!**/migrations/__init__.py
+
+__pycache__/
+*.py[cod]

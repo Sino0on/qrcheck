@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+<body>
+    <section class="control">
+        <div class="container">
+            <div class="control__content">
+                <div class="control__teacher">
+                    <p>Препод</p>
+                </div>
+                <img src="{% static '/assets/img/control/qr.png' %}" alt="">
+                <div class="control__btns">
+                    <button class="control__btn">Закончить пару</button>
+                    <button class="control__btn">Запросы</button>
+                    <button class="control__btn">Выйти из аккаунта</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

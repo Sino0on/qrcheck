@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/index.css'%}">
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <div class="hero__bg">
+                    <img src="{% static '/assets/img/hero/background.svg' %}" alt="">
+                    <div class="hero__blue">
+                        <div class="hero__flex">
+                            <p>Забыли пароль?</p>
+                            <img src="{% static '/assets/img/hero/line.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="hero__register">
+                        <h1>Авторизация</h1>
+
+                        <form method="post" action="{% url 'login' %}">
+                            <label>{% csrf_token %}
+                                <p>Имя и фамилия</p>
+                                {{ loginform.username }}
+                            </label>
+                            <label class="hero__position">
+                                <p class="hero__top">Пароль</p>
+                                <div>
+                                {{ loginform.password }}
+                                <img src="{% static '/assets/img/hero/eye.svg' %}" alt="">
+                            </div>
+                            </label>
+
+                        <div class="hero__come">
+                            <button type="submit">Войти в аккаунт</button>
+                            <img src="{% static '/assets/img/hero/line_blue.svg' %}" alt="">
+                        </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
